@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6bb77b;
+    color: white;
+}
+
+.content {
+    padding-inline: 160px;
+}
+
+.navbar {
+    background-color: #172d13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d76f30;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #6bb77b;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 50px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+}
+
+.caption h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 24px;
+}
+
+.main-content {
+    background-color: #6bb77b;
+    color: white;
+    padding: 32px;
+    line-height: 1.6;
+    padding-inline: 160px;
+}
+
+.sekilas-tentang {
+    margin-bottom: 32px;
+}
+
+.sekilas-tentang h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #216b13;
+}
+
+.sekilas-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.balai-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.berita-terkini {
+    padding: 32px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.berita-terkini h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #2a5821;
+}
+
+.berita-terkini .berita {
+    background-color: #216b13;
+}
+
+.berita-terkini p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #777;
+}
+
+.berita-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 50px;
+}
+
+.berita-item {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.berita-item:hover {
+    transform: translateY(-5px);
+}
+
+.berita-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.berita-content {
+    padding: 16px;
+    text-align: left;
+}
+
+.berita-content .tanggal {
+    font-size: 14px;
+    color: #f57c00;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.berita-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.berita-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.contact-us {
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container {
+    background-color: #ffffff;
+    max-width: 60%;
+    margin-left: 250px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000;
+    font-size: 14px; 
+    margin-left: 75px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%; 
+    padding: 8px; 
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 75px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #316d27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #e60000;
+}
+
+footer {
+    background-color: #064d31;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo {
+    flex: 0 0;
+    /* Membatasi ukuran logo */
+    text-align: left;
+    /* Menjaga posisi logo di kiri */
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-logo .logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.footer-contact,
+.footer-links,
+.footer-subscribe {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contact h3,
+.footer-links h3,
+.footer-subscribe h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f09a4e;
+}
+
+.footer-contact p,
+.footer-links ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-subscribe form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.footer-subscribe button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #f09a4e;
+    color: #ffffff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.footer-subscribe button:hover {
+    background-color: #e67e22;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer-socials a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+footer p.footer-copyright {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+
+
+.profil-perangkat h2 {
+    align-items: center;
+    padding-left: 100px;
+    padding-left: 70px;
+}
+
+.profil-container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profil-perangkat-header {
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.profil-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.profil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profil-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profil-table th,
+.profil-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #0000006e;
+}
+.layout {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Style untuk berita terkini yang lebih kecil */
+.berita-terkini {
+    font-size: 0.9rem;
+    /* Ukuran font lebih kecil */
+    width: 30%;
+    /* Lebar berita terkini */
+}
+
+.berita-item {
+    margin-bottom: 8px;
+    /* Jarak antar berita */
+}
+
+/* Style untuk bagian visi dan misi */
+.visi-misi {
+    width: 65%;
+    /* Lebar bagian visi dan misi */
+}
+
+.organization {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bagan-struktur {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sejarah-kalurahan {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.organization p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Galeri */
+.gallery-content{
+    background-color: #172d1360;
+    padding: 20px;
+    border-radius: 10px;
+}
+.gallery-section {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.gallery-section p {
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item.landscape {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.gallery-item.portrait {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #172d13, #6bb77b);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    background: url(img/gunung1.jpg);
+    background-position: 100%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.wa-button {
+    background-color: #25d366;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wa-button:hover {
+    background-color: #1ab74a;
+}
+
+.wa-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Contact Info Cards */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.info-card {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #216b13;
+}
+
+.info-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* Rekomendasi Tempat Wisata */
+.destination-terkini h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #2a5821;
+    text-align: center;
+}
+
+.destination-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 16px;
+}
+
+.destination-item {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.destination-item:hover {
+    transform: translateY(-5px);
+}
+
+.destination-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 16px;
+}
+
+.destination-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.destination-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Galeri */
+.destination-content {
+    background-color: #172d1360;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.destination-section h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.destination-section p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.destination-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-item.landscape {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.destination-item.portrait {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.destination-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
